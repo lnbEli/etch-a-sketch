@@ -13,6 +13,8 @@
 .outer-sect {
   display: flex;
   justify-content: center;
+  width: 900px;
+  height: 900px;
 }
 
 .gridLimit {

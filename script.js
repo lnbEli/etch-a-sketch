@@ -11,4 +11,4 @@ function greatSquares(num) {
   }
 }
 
-greatSquares(16);
+greatSquares(100);
