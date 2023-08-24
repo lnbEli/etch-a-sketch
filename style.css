@@ -1,9 +1,9 @@
-.sqStyle {
+/* .sqStyle {
   min-width: 50px;
   min-height: 50px;
   border: 1px solid black;
   background-color: pink;
-}
+} */
 
 .grid-cont {
   display: flex;
@@ -13,10 +13,13 @@
 .outer-sect {
   display: flex;
   justify-content: center;
-  width: 900px;
-  height: 900px;
+  border: 5px solid black;
 }
 
 .gridLimit {
   height: auto;
+}
+
+div {
+  box-sizing: border-box;
 }
