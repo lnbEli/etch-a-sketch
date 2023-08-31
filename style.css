@@ -1,22 +1,29 @@
-/* .sqStyle {
-  min-width: 50px;
-  min-height: 50px;
-  border: 1px solid black;
-  background-color: pink;
-} */
-
 div {
   box-sizing: border-box;
 }
 
-.outer-sect {
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.sectionOne {
   display: flex;
   justify-content: center;
+  align-items: center;
+  border: 2px solid blue;
+  height: 100%;
+}
+
+.outer-sect {
   border: 5px solid black;
 }
 
 .gridLimit {
-  height: auto;
+  /* height: auto; */
 }
 
 .grid-cont {

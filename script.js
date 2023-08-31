@@ -1,8 +1,7 @@
 // document.body.onload = addElement;
 
 function greatSquares(num) {
-  const width = 450;
-
+  const width = 650;
   const outerSect = document.querySelector(".outerSect");
 
   outerSect.style.width = `${width}px`;
@@ -26,4 +25,4 @@ function greatSquares(num) {
   }
 }
 
-greatSquares(17);
+greatSquares(9);
