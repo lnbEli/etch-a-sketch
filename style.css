@@ -5,9 +5,8 @@
   background-color: pink;
 } */
 
-.grid-cont {
-  display: flex;
-  flex-wrap: wrap;
+div {
+  box-sizing: border-box;
 }
 
 .outer-sect {
@@ -20,6 +19,7 @@
   height: auto;
 }
 
-div {
-  box-sizing: border-box;
+.grid-cont {
+  display: flex;
+  flex-wrap: wrap;
 }

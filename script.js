@@ -1,13 +1,12 @@
 // document.body.onload = addElement;
 
 function greatSquares(num) {
-  const width = 500;
-  const height = 500;
+  const width = 450;
 
   const outerSect = document.querySelector(".outerSect");
 
   outerSect.style.width = `${width}px`;
-  outerSect.style.height = `${height}px`;
+  outerSect.style.height = `${width}px`;
   outerSect.style.border = "1px solid red";
 
   //create
@@ -17,14 +16,14 @@ function greatSquares(num) {
     const grid = document.querySelector(".grid-cont");
     const sectOne = document.querySelector(".gridLimit");
 
-    square.style.minHeight = `${height / num}px`;
+    square.style.minHeight = `${width / num}px`;
     square.style.minWidth = `${width / num}px`;
     square.style.backgroundColor = "pink";
     square.style.border = "1px solid black";
 
-    sectOne.style.width = `${num * 25}px`; //?????
+    sectOne.style.width = `${width}px`;
     grid.appendChild(square);
   }
 }
 
-greatSquares(4);
+greatSquares(17);
