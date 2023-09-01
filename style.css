@@ -29,4 +29,17 @@ body {
 .grid-cont {
   display: flex;
   flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.grid-cont:hover {
+  background-color: grey;
+}
+
+.hover {
+  background-color: brown;
+}
+
+.square {
+  background-color: pink;
 }
