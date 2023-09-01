@@ -12,7 +12,8 @@ body {
 
 .sectionOne {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   border: 2px solid blue;
   height: 100%;

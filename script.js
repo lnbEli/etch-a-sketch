@@ -1,9 +1,14 @@
 // document.body.onload = addElement;
 
 function greatSquares(num) {
-  const width = 400;
+  const width = 700;
   const outerSect = document.querySelector(".outerSect");
+  const section = document.querySelector(".sectionOne");
+  const button = document.createElement("button");
+  button.innerHTML = "Change Size";
+  button.addEventListener("click", promptSize);
 
+  section.prepend(button);
   outerSect.style.width = `${width}px`;
   outerSect.style.height = `${width}px`;
   outerSect.style.border = "1px solid red";
@@ -13,7 +18,7 @@ function greatSquares(num) {
   for (let i = 0; i < num ** 2; i++) {
     const square = document.createElement("div");
     const grid = document.querySelector(".grid-cont");
-    const sectOne = document.querySelector(".gridLimit");
+    const gridLimit = document.querySelector(".gridLimit");
 
     square.style.minHeight = `${width / num}px`;
     square.style.minWidth = `${width / num}px`;
@@ -27,7 +32,7 @@ function greatSquares(num) {
       this.classList.add("hover");
     }
 
-    sectOne.style.width = `${width}px`;
+    gridLimit.style.width = `${width}px`;
     grid.appendChild(square);
   }
 }
