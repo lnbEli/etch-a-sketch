@@ -23,9 +23,8 @@ body {
   border: 5px solid black;
 }
 
-.gridLimit {
+/* .gridLimit {
   /* height: auto; */
-}
 
 .grid-cont {
   display: flex;
