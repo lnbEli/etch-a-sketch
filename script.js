@@ -37,13 +37,13 @@ function greatSquares(num) {
     square.style.border = "1px solid grey";
     square.style.backgroundColor = "rgb(255, 255, 255)";
 
+    //function that progressively changes colour of tiles to black after 10 iterations.
     function changeColor() {
       const color = this.style.backgroundColor;
       const rgbArray = color.match(/\d+/g);
       const r = Number(rgbArray[0]);
       const g = Number(rgbArray[1]);
       const b = Number(rgbArray[2]);
-      console.log(r, g, b);
       this.style.backgroundColor = `rgb(${r - 25.5}, ${g - 25.5},${b - 25.5})`;
     }
 
