@@ -27,19 +27,24 @@ function promptSize() {
 //create function to populate grid
 function greatSquares(num) {
   const grid = document.querySelector(".grid-cont");
-  const width = 750;
+  const width = 450;
   gridLimit.style.width = `${width}px`;
 
   for (let i = 0; i < num ** 2; i++) {
     const square = document.createElement("div");
     square.style.minHeight = `${width / num}px`;
     square.style.minWidth = `${width / num}px`;
-    square.style.border = "1px solid black";
-    square.classList.add("square");
+    square.style.border = "1px solid grey";
+    square.style.backgroundColor = "rgb(255, 255, 255)";
 
     function changeColor() {
-      this.classList.remove("square");
-      this.classList.add("hover");
+      const color = this.style.backgroundColor;
+      const rgbArray = color.match(/\d+/g);
+      const r = Number(rgbArray[0]);
+      const g = Number(rgbArray[1]);
+      const b = Number(rgbArray[2]);
+      console.log(r, g, b);
+      this.style.backgroundColor = `rgb(${r - 25.5}, ${g - 25.5},${b - 25.5})`;
     }
 
     square.addEventListener("mouseover", changeColor);
