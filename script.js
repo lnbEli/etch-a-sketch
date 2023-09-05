@@ -13,7 +13,11 @@ section.prepend(button);
 
 //create function to change size of grid
 function promptSize() {
-  let size = Number(prompt("Please grid size required (maximum 100)"));
+  let size = Number(prompt("Please enter grid size required"));
+  while (size > 100 || size < 1) {
+    size = Number(prompt("Please enter grid size required (maximum 100)"));
+  }
+  //CHECK why div === grid-cont???
   while (div.firstChild) {
     div.removeChild(div.firstChild);
   }
@@ -23,7 +27,7 @@ function promptSize() {
 //create function to populate grid
 function greatSquares(num) {
   const grid = document.querySelector(".grid-cont");
-  const width = 350;
+  const width = 750;
   gridLimit.style.width = `${width}px`;
 
   for (let i = 0; i < num ** 2; i++) {
