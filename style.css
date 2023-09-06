@@ -2,6 +2,19 @@ div {
   box-sizing: border-box;
 }
 
+button {
+  all: unset;
+  padding: 3px 18px;
+  font-size: 22px;
+  border: 2px solid rgba(61, 59, 62, 0.331);
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(157, 232, 232);
+  cursor: pointer;
+}
+
 html {
   height: 100%;
 }
@@ -15,12 +28,14 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 2px solid blue;
+  border: 5px solid rgba(61, 59, 62, 0.331);
   height: 100%;
+  background-color: rgb(182, 218, 218);
+  border-radius: 5px;
 }
 
-.outer-sect {
-  border: 5px solid black;
+.outerSect {
+  border: 2px solid black;
 }
 
 .grid-cont {
