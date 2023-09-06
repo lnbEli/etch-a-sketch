@@ -27,7 +27,7 @@ function promptSize() {
 //create function to populate grid
 function greatSquares(num) {
   const grid = document.querySelector(".grid-cont");
-  const width = 750;
+  const width = 620;
   gridLimit.style.width = `${width}px`;
 
   for (let i = 0; i < num ** 2; i++) {
