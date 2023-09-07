@@ -1,33 +1,54 @@
+let gridColourRGB = true;
+const startingGridSize = 24;
+let currentGridSize = startingGridSize;
+
 //create container div for grid and add to html
 const div = document.createElement("div");
 div.classList.add("grid-cont");
 const gridLimit = document.querySelector(".gridLimit");
 gridLimit.appendChild(div);
 
-//create button and add to html
+//create buttons and add to html
 const button = document.createElement("button");
+const buttonColor = document.createElement("button");
 button.innerHTML = "Change Size";
+buttonColor.innerHTML = "RGB/Greyscale";
+buttonColor.addEventListener("click", pressToChangeColor);
 button.addEventListener("click", promptSize);
-const section = document.querySelector(".sectionOne");
-section.prepend(button);
+const header = document.querySelector(".header");
+header.prepend(button);
+header.prepend(buttonColor);
 
 //create function to change size of grid
 function promptSize() {
   const message = "Please enter grid size required";
-  let size = Number(prompt(message));
-  while (size > 100 || size < 1 || !Number.isInteger(size)) {
-    size = Number(prompt(`${message} (maximum 100)`));
+  currentGridSize = Number(prompt(message));
+  while (
+    currentGridSize > 100 ||
+    currentGridSize < 1 ||
+    !Number.isInteger(currentGridSize)
+  ) {
+    currentGridSize = Number(prompt(`${message} (maximum 100)`));
   }
   while (div.firstChild) {
     div.removeChild(div.firstChild);
   }
-  greatSquares(size);
+  greatSquares(currentGridSize);
+}
+
+//create function to change colour of grid
+function pressToChangeColor() {
+  gridColourRGB ? (gridColourRGB = false) : (gridColourRGB = true);
+  while (div.firstChild) {
+    div.removeChild(div.firstChild);
+  }
+  greatSquares(currentGridSize);
 }
 
 //create function to populate grid
 function greatSquares(num) {
   const grid = document.querySelector(".grid-cont");
-  const width = 620;
+  const width = 580;
   gridLimit.style.width = `${width}px`;
 
   for (let i = 0; i < num ** 2; i++) {
@@ -47,10 +68,22 @@ function greatSquares(num) {
       this.style.backgroundColor = `rgb(${r - 25.5}, ${g - 25.5},${b - 25.5})`;
     }
 
-    square.addEventListener("mouseover", changeColor);
+    //function that changes colour of tiles to random colour
+    function changeColorRGB() {
+      const r = Math.floor(Math.random() * 255);
+      const g = Math.floor(Math.random() * 255);
+      const b = Math.floor(Math.random() * 255);
+      const color = `rgb(${r}, ${g}, ${b})`;
+      this.style.backgroundColor = color;
+    }
+
+    square.addEventListener(
+      "mouseover",
+      gridColourRGB ? changeColorRGB : changeColor
+    );
 
     grid.appendChild(square);
   }
 }
 
-greatSquares(24);
+greatSquares(startingGridSize);

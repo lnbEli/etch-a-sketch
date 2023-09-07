@@ -4,14 +4,31 @@ div {
 
 button {
   all: unset;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 160px;
   padding: 3px 18px;
   font-size: 22px;
-  border: 2px solid rgba(61, 59, 62, 0.331);
+  border: 4px solid rgba(61, 59, 62, 0.331);
   border-radius: 5px;
+  text-align: center;
 }
 
 button:hover {
-  background-color: rgb(157, 232, 232);
+  /* background-color: rgb(157, 232, 232); */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 10%,
+    rgba(208, 222, 33, 1) 20%,
+    rgba(79, 220, 74, 1) 30%,
+    rgba(63, 218, 216, 1) 40%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(28, 127, 238, 1) 60%,
+    rgba(95, 21, 242, 1) 70%,
+    rgba(186, 12, 248, 1) 80%,
+    rgba(251, 7, 217, 1) 90%,
+    rgba(255, 0, 0, 1) 100%
+  );
   cursor: pointer;
 }
 
@@ -26,7 +43,8 @@ body {
 .sectionOne {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 10px;
   align-items: center;
   border: 5px solid rgba(61, 59, 62, 0.331);
   height: 100%;
@@ -34,12 +52,14 @@ body {
   border-radius: 5px;
 }
 
-.outerSect {
-  border: 2px solid black;
-}
-
 .grid-cont {
   display: flex;
   flex-wrap: wrap;
   cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
