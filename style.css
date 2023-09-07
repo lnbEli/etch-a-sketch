@@ -1,5 +1,6 @@
 div {
   box-sizing: border-box;
+  padding: 0px;
 }
 
 button {
@@ -50,6 +51,7 @@ body {
   height: 100%;
   background-color: rgb(182, 218, 218);
   border-radius: 5px;
+  padding: 10px;
 }
 
 .grid-cont {
@@ -64,9 +66,8 @@ body {
   gap: 10px;
 }
 
-h1 {
-  padding: 12px;
+.h1 {
+  min-height: 0;
+  padding: 10px;
   font-size: 64px;
-  border: 2px solid black;
-  border-radius: 12px;
 }
